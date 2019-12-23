@@ -14,23 +14,43 @@ public class IntArraryKit {
     }
 
     public IntArraryKit(int[] arry) {
+
         this.arry = arry;
     }
 
     @Override
     public String toString() {
-        return Arrays.toString(arry) ;
+        String str="";
+        for (int i = 0; i < arry.length; i++) {
+            str=str+arry[i];
+            if (i<arry.length-1){
+                str=str+",";
+            }
+        }
+        return "[ "+str+" ]";
+//        return Arrays.toString(arry);
     }
-    public int getMax(){
-        int tempmax=0;
+
+    public int getMax() {
+        int tempmax = 0;
         for (int i : arry) {
-            if (tempmax<i){
-                tempmax=i;
+            if (tempmax < i) {
+                tempmax = i;
             }
         }
         return tempmax;
     }
-    public void sort(){
-        Arrays.sort(arry);
+
+    public void sort() {
+        for (int i = arry.length; i >0; i--) {
+            for (int j = 0; j < i-1; j++) {
+                if (arry[j]>arry[j+1]) {
+                    arry[j]+=arry[j+1];
+                    arry[j+1]=arry[j]-arry[j+1];
+                    arry[j]-=arry[j+1];
+                }
+            }
+        }
+//        Arrays.sort(arry);
     }
 }
