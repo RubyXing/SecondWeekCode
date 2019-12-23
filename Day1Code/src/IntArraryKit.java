@@ -22,9 +22,9 @@ public class IntArraryKit {
     public String toString() {
         String str="";
         for (int i = 0; i < arry.length; i++) {
-            str=str+arry[i];
+            str+=arry[i];
             if (i<arry.length-1){
-                str=str+",";
+                str+=",";
             }
         }
         return "[ "+str+" ]";
