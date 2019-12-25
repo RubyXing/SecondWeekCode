@@ -7,7 +7,7 @@ package com.qilin.xing;/*
 
 //    创建一个Fish类,拥有type、 food. weight. color属性 ，eat、swam、bubble行为;
 public class Fish extends Animal {
-    private String color;
+    protected String color;
 
     public void swam(){
         System.out.println("fish swam");

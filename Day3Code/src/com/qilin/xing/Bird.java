@@ -6,7 +6,7 @@ package com.qilin.xing;/*
  */
 //二.创建一个Bird类 ,拥有type、food、 weight、 legCount属性 ，eat、fly行为;
 public class Bird extends Animal{
-    private String legCount;
+    protected String legCount;
 
     public void fly(){
         System.out.println("bird fly");
