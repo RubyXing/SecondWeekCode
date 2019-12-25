@@ -18,6 +18,9 @@ public class Animal {
     {
         System.out.println("Animal Code");
     }
+    public Animal(int i ){
+
+    }
     public String eat(String eat){
         return "吃" + eat;
     }
