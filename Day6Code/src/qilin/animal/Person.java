@@ -15,6 +15,9 @@ public class Person {
         this.energy = energy;
     }
 
+    public Person() {
+    }
+
     public boolean checkHappy() {
         if (happyValue <= 0) {
             System.out.println("你已经死了不能操作");
