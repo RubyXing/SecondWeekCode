@@ -18,7 +18,11 @@ class Father {
     }
 }
 
+
 class Child extends Father {
+    {
+        System.out.println("child daimakuai");
+    }
     public Child() {
         this("dd");
         System.out.println("子无参数");
