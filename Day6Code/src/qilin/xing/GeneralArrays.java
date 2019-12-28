@@ -37,20 +37,24 @@ public class GeneralArrays {
         add(o);
     }
 
-    public Object find(Object o) {
+    public int find(Object o) {
         for (int i = 0; i < a.length; i++) {
             if (a[i].equals(a)) {
-                return a[i];
+                return i;
             }
-
         }
-        return null;
+        return -1;
     }
 
     public boolean delate(Object o) {
-        if (find(o) != null) {
-            Object delet = find(o);
-            delet = null;
+        if (find(o) != -1) {
+            if (find(0) != size - 1) {
+                for (int i = find(o); i < size - 1; i++) {
+                    a[i] = a[i + 1];
+                }
+            }
+            a[size - 1] = null;
+            nElem--;
             return true;
         } else {
             return false;
