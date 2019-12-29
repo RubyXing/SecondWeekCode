@@ -3,4 +3,8 @@ package qilin.myatmachieve;/*
  */
 
 public class AtmStart {
+    public static void main(String[] args) {
+        Service atm = new Service();
+        atm.startATM();
+    }
 }
